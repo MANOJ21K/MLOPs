@@ -25,3 +25,38 @@ This repository demonstrates how to orchestrate an ML pipeline using Prefect, an
 
    ```bash
    prefect server start
+
+5. **Configure the prfect server**
+
+   Configure the prefect server by setting the API URL. Replace the URL with the actual URL of your prefect server:
+
+   ```bash
+   prefect config set PREFECT_API_URL=http://127.0.0.1:4200/api
+
+6. **Prefect Project Initialization**
+
+   Run the command below to initialize the Prefect YAML file that will hold all the necessary files for deployment:
+
+   ```bash
+   prefect project init
+
+7. **Prefect Deployment**
+
+   Deploy the orchestration.py script containing the main flow to Prefect. Replace 'orchestration.py' with the actual filename and function name of your Prefect flow:
+
+   ```bash
+   prefect deploy orchestration.py:main_flow -n trips -p zoomcamp1
+
+8. **Start the Prefect Worker**
+
+   Start the Prefect worker to execute the scheduled runs. Replace 'zoomcamp1' with the pool name or resource identifier:
+
+   ```bash
+   prefect worker start --pool 'zoomcamp1'
+
+9. **Schedule/Run the Workflow**
+
+   Schedule and run the Prefect deployment for your main flow with the following command:
+
+   ```bash
+   prefect deployment run 'main-flow/trips'
