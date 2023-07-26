@@ -1,8 +1,10 @@
 Orchestrating ML Pipeline with Prefect
+
 Introduction
 This repository contains code and instructions to orchestrate an ML pipeline using Prefect, an open-source workflow management system. The pipeline consists of several steps, including converting Jupyter Notebook to Python script, Prefect setup, server configuration, deployment, worker setup, and scheduling or running the pipeline.
 
 Steps in Orchestration
+
 Have IPython Notebook File:
 
 Ensure that you have completed all the data science tasks and save the Jupyter Notebook file (e.g., data_science.ipynb).
