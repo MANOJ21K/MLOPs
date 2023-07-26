@@ -11,44 +11,43 @@ Convert the IPython notebook file to a Python script (*.py) with functions and a
 3. Install Prefect
 Ensure you have Prefect installed. You can install it using pip:
 
-bash
-Copy code
+```bash
 pip install prefect
+
 4. Start the Prefect Server
 Start the Prefect server to manage your workflow runs:
 
-bash
-Copy code
+```bash
 prefect server start
+
 5. Configure the Prefect Server
 Configure the Prefect server by setting the API URL. Replace the URL with the actual URL of your Prefect server:
 
-bash
-Copy code
+```bash
 prefect config set PREFECT_API_URL=http://127.0.0.1:4200/api
+
 6. Prefect Project Initialization
 Run the command below to initialize the Prefect YAML file that will hold all the necessary files for deployment:
 
-bash
-Copy code
+```bash
 prefect project init
+
 7. Prefect Deployment
 Deploy the orchestration.py script containing the main flow to Prefect. Replace 'orchestration.py' with the actual filename and function name of your Prefect flow:
 
-bash
-Copy code
+```bash
 prefect deploy orchestration.py:main_flow -n trips -p zoomcamp1
+
 8. Start the Prefect Worker
 Start the Prefect worker to execute the scheduled runs. Replace 'zoomcamp1' with the pool name or resource identifier:
 
-bash
-Copy code
+```bash
 prefect worker start --pool 'zoomcamp1'
+
 9. Schedule/Run the Workflow
 Schedule and run the Prefect deployment for your main flow with the following command:
 
-bash
-Copy code
+```bash
 prefect deployment run 'main-flow/trips'
 Contributing
 Pull requests and contributions are welcome. For major changes, please open an issue first to discuss the changes.
