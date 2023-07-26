@@ -10,7 +10,6 @@ Convert the IPython notebook file to a Python script (*.py) with functions and a
 
 3. Install Prefect
 Ensure you have Prefect installed. You can install it using pip:
-
 ```bash
 pip install prefect
 
