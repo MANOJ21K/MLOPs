@@ -18,3 +18,10 @@ This repository demonstrates how to orchestrate an ML pipeline using Prefect, an
 
    ```bash
    pip install prefect
+
+4. **Start the prefect server**
+
+   Start the prefect server to manage your workflow runs:
+
+   ```bash
+   prefect server start
